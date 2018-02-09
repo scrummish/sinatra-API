@@ -2,12 +2,17 @@ require 'sinatra/base'
 require 'sinatra/activerecord'
 
 # controllers
-require './controllers/LoginController'
+require './controllers/ApplicationController'
+require './controllers/UserController'
 
 # models
-# require './models/GameModel'
+require './models/UserModel'
 
 # routes
-map('/login') {
-	run LoginController
+map('/') {
+	run ApplicationController
+}
+
+map('/user') {
+	run UserController
 }
