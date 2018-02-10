@@ -1,1 +1,4 @@
-class Incident 
+class Incident < ActiveRecord::Base
+
+
+end
