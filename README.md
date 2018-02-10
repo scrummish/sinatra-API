@@ -21,8 +21,8 @@ For drivers stuck in traffic: where is the accident ahead of them.
 
 black is mvp and _stretch is italicized_
 
-As a citizen I should be able to register for an account
-As a citizen I should be able to login to my account
+As a citizen I should be able to register for an account  
+As a citizen I should be able to login to my account  
 As a citizen I should be able to see all the posted crimes in a certain area of my choosing _or based on IP address or gps location by default_
 As a citizen I should be able to post any crimes I am witnessing
 As a citizen I should be able to delete any crime i posted
