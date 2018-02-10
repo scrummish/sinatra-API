@@ -38,8 +38,8 @@ As a policeperson I should be able to delete any crime posted.
 As a policeperson I should be able to post alerts for an area of my choosing or my current area.  
 As a policeperson I should be able to reply to citizens that have made a crime report   through the app or see their contact info if they wish to share it with the police (  this citizen contact info is in bcrypt and is not shared with other citizens)_  
 
-![wireframes](../../assets/WireFrames.jpeg)
+![wireframes](https://imgur.com/a/O2vDM)
 
-![database](../../assets/Database.jpeg)
+![database](https://imgur.com/a/T3Tv4)
 
 
