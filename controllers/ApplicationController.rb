@@ -29,8 +29,4 @@ class ApplicationController < Sinatra::Base
 	use Rack::MethodOverride 
 	set :method_override, true
 
-	not_found do
-    	erb :not_found
-  	end
-
 end
