@@ -4,7 +4,7 @@ class UserController < ApplicationController
 		resp = {
 			status: {
 				success: true,
-				message: "Testing route /user"
+				message: "Testing route /user and testing repo rename"
 			}
 		}
 		resp.to_json
