@@ -24,10 +24,14 @@ class UserController < ApplicationController
 			session[:username] = @user.firstname
 			session[:user_id] = @user.id
 			session[:message] = "Logged in as #{@user.firstname}"
+			p "----------FOUND USER"
 		else
 			session[:message] = "Invalid username or password"
+			p "INVALID SIGN IN"
 		end
+
 		session.to_json
+		
 	end
 
 	# post '/edit' do
