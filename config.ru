@@ -4,9 +4,11 @@ require 'sinatra/activerecord'
 # controllers
 require './controllers/ApplicationController'
 require './controllers/UserController'
+require './controllers/IncidentController'
 
 # models
 require './models/UserModel'
+require './models/IncidentModel'
 
 # routes
 map('/') {
@@ -14,4 +16,7 @@ map('/') {
 }
 map('/user') {
 	run UserController
+}
+map('/incedent') {
+	run IncidentController
 }

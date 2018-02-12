@@ -11,9 +11,9 @@ In general github projects will be software that you are building. Hence a readm
 
 Obviously for a homework assignment, many of these things don’t really apply, but some of them kind of do, so get in the habit of creating a README with as much of this info is relevant as possible.
 
-# FIRST DRAFT OF README
+# SECOND DRAFT OF README
 
-## h2 What is the problem we are trying to solve.
+## What is the problem we are trying to solve.
 
 Snitchr is a crime reporting app, in which civilians can report and see crimes on a map.
 
@@ -25,18 +25,18 @@ black is mvp and _stretch is italicized_
 
 As a citizen I should be able to register for an account  
 As a citizen I should be able to login to my account  
-As a citizen I should be able to see all the posted crimes in a certain area of my   choosing _or based on IP address or gps location by default_  
-As a citizen I should be able to post any crimes I am witnessing  
+As a citizen I should be able to see all the posted incidents in a certain area of my   choosing _or based on IP address or gps location by default_  
+As a citizen I should be able to post any incidents I am witnessing  
 As a citizen I should be able to delete any crime i posted  
 
 
 _As a policeperson I should be able to register for an account  
 As a policeperson I should be able to login to my account  
-As a policeperson I should be able to see all the crimes posted in the area or areas of   my choosing or based on gps location.  
-As a policeperson I should be able to see AND EDIT crimes I am witnessing.  
+As a policeperson I should be able to see all the incidents posted in the area or areas of   my choosing or based on gps location.  
+As a policeperson I should be able to see AND EDIT incidents I am witnessing.  
 As a policeperson I should be able to delete any crime posted.  
 As a policeperson I should be able to post alerts for an area of my choosing or my current area.  
-As a policeperson I should be able to reply to citizens that have made a crime report   through the app or see their contact info if they wish to share it with the police (  this citizen contact info is in bcrypt and is not shared with other citizens)_  
+As a policeperson I should be able to reply to citizens that have made an incident report   through the app or see their contact info if they wish to share it with the police (  this citizen contact info is in bcrypt and is not shared with other citizens)_  
 
 ![wireframes](https://github.com/scrummish/snitchr-backend/blob/master/assets/WireFrames.jpg)
 
