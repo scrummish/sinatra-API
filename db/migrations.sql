@@ -20,6 +20,16 @@ CREATE TABLE incidents (
 	on_going BOOL NOT NULL
 );
 
+CREATE TABLE reports (
+	id SERIAL PRIMARY KEY,
+	user_id INT REFERENCES users(id),
+	type_of_incident VARCHAR(60),
+	location_description VARCHAR(60),
+	address VARCHAR(60),
+	latitude FLOAT NOT NULL ,
+	longitude FLOAT NOT NULL 
+);
+
 INSERT INTO users (firstname, lastname, email, password_digest)
 VALUES ('value1','value2','value3','value4');
 

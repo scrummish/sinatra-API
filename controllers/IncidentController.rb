@@ -1,5 +1,26 @@
 class IncidentController < ApplicationController
 
+	get '/' do
+		@reports = Report.all
+		@reports.to_json
+	end
+
+	post '/create' do
+		p "--------------------------"
+		p session[:user_id]
+		p "-----------session not working---------------"
+		payload = JSON.parse(request.body.read).symbolize_keys
+
+		@report = Report.new
+		@report.user_id = session[:user_id]
+		@report.type_of_incident = payload[:incidentType]
+		@report.location_description = payload[:incidentLocationDescription]
+		@report.address = payload[:approximateAddress]
+		@report.latitude = payload[:addressLatitude]
+		@report.longitude = payload[:addressLongitude]
+		@report.save
+	end
+
 	get '/myIncidents' do
 		@user = User.find session[:user_id]
 		@incidents_for_one_civilian = User.incidents.order[:id]

@@ -9,6 +9,7 @@ require './controllers/IncidentController'
 # models
 require './models/UserModel'
 require './models/IncidentModel'
+require './models/ReportModel'
 
 # routes
 map('/') {
