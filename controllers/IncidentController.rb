@@ -19,6 +19,39 @@ class IncidentController < ApplicationController
 		@report.latitude = payload[:addressLatitude]
 		@report.longitude = payload[:addressLongitude]
 		@report.save
+
+		@report.to_json
+	end
+
+	# Edit a users incident route
+	put '/edit/:id' do
+		payload = JSON.parse(request.body.read).symbolize_keys
+
+		@report = Report.find params[:id]
+		@report.type_of_incident = payload[:incidentType]
+		@report.incident_details = payload[:incidentDetails]
+		@report.location_description = payload[:incidentLocationDescription]
+		@report.save
+
+		response = {
+			status: {
+				all_good: true,
+			},
+			editedReport: @report
+		}
+
+		response.to_json
+	end
+
+	# Delete an incident route
+	delete '/delete/:id' do
+		@report = Report.find params[:id]
+		@report.delete
+
+		resp = {
+			message: "Deleted"
+		}
+		resp.to_json
 	end
 
 	# Get a users incidents route
@@ -34,22 +67,4 @@ class IncidentController < ApplicationController
 		}
 		response.to_json
 	end
-
-	# Edit a users incident route
-	# get '/' do
-		# @user = User.find params[:id]
-
-		# response = {
-		# 	status: {
-		# 		all_good: true,
-		# 		number_of_results: @user.reports.length
-		# 	},
-		# 	incidents: @user.reports
-		# }
-		# response.to_json
-	# end
-
-	# Delete a users incident route
-	# get '/' do
-	# end
 end
