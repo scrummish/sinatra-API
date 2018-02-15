@@ -19,6 +19,9 @@ class IncidentController < ApplicationController
 		@report.latitude = payload[:addressLatitude]
 		@report.longitude = payload[:addressLongitude]
 		@report.save
+
+		@report.to_json
+
 	end
 
 	# Get a users incidents route
