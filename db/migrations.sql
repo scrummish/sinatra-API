@@ -11,20 +11,12 @@ CREATE TABLE users (
   password_digest VARCHAR(60)
 );
 
-CREATE TABLE incidents (
-	id SERIAL PRIMARY KEY,
-	user_id SERIAL,
-	type_of_incident VARCHAR(60),
-	location_description VARCHAR(60),
-	address VARCHAR(60),
-	on_going BOOL NOT NULL
-);
-
 CREATE TABLE reports (
 	id SERIAL PRIMARY KEY,
 	user_id INT REFERENCES users(id),
 	type_of_incident VARCHAR(60),
-	location_description VARCHAR(60),
+	incident_details VARCHAR(120),
+	location_description VARCHAR(120),
 	address VARCHAR(60),
 	latitude FLOAT NOT NULL ,
 	longitude FLOAT NOT NULL 

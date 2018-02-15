@@ -13,6 +13,7 @@ class IncidentController < ApplicationController
 		@report = Report.new
 		@report.user_id = payload[:userId]
 		@report.type_of_incident = payload[:incidentType]
+		@report.incident_details = payload[:incidentDetails]
 		@report.location_description = payload[:incidentLocationDescription]
 		@report.address = payload[:approximateAddress]
 		@report.latitude = payload[:addressLatitude]
