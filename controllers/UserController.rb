@@ -2,6 +2,7 @@ class UserController < ApplicationController
 	
 	get '/' do
 		@users = User.all
+
 		resp = {
 			status: {
 				success: true,
@@ -22,13 +23,13 @@ class UserController < ApplicationController
 		if @user && @user.authenticate(@pw)
 			session[:logged_in] = true
 			session[:username] = @user.firstname
-			session[:user_id] = @user.id
+			session[:id] = @user.id
 			session[:message] = "Logged in as #{@user.firstname}"
+
 		else
 			session[:message] = "Invalid username or password"
 			p "INVALID SIGN IN"
 		end
-
 		session.to_json
 		
 	end

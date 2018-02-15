@@ -18,6 +18,6 @@ map('/') {
 map('/user') {
 	run UserController
 }
-map('/incedent') {
+map('/incident') {
 	run IncidentController
 }
