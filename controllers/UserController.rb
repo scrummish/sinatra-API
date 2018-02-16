@@ -49,6 +49,42 @@ class UserController < ApplicationController
 	# 	end
 	# end
 
+	# the route might be wrong below, but it works with front end
+	get '/:id' do  
+		@user = User.find params[:id]
+		resp = {
+			status: {
+				success: true,
+				message: "this is one user retrieved by user id"
+			},
+			users: @user 
+		}
+		resp.to_json
+
+	end
+
+	put '/edit/:id' do
+		payload = JSON.parse(request.body.read).symbolize_keys
+		@user = User.find_by(id: params[:id])
+		@user.firstname = payload[:firstname]
+		@user.lastname = payload[:lastname]
+		@user.email = payload[:email]
+		# user should not be able to change his email after registering
+		# @user.password = payload[:password]
+		@user.save 
+		resp = {
+			status: {
+				success: true,
+				message: "User info updated"
+			},
+			users: @user
+			}
+		resp.to_json
+		
+
+	end
+
+
 	post '/' do
 		payload = params
 		payload = JSON.parse(request.body.read).symbolize_keys
@@ -71,4 +107,6 @@ class UserController < ApplicationController
 			session.to_json
 		end
 	end
+
+
 end
