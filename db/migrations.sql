@@ -25,5 +25,5 @@ CREATE TABLE reports (
 INSERT INTO users (firstname, lastname, email, password_digest)
 VALUES ('value1','value2','value3','value4');
 
-INSERT INTO incidents (user_id, type_of_incident, location_description, address, on_going)
+INSERT INTO incidents (user_id, type_of_incident, location_description, address, latitude, longitude, on_going)
 VALUES ('1', 'crime', 'at the TJ Max at Madison and State', '11 N. State St., Chicago, IL', true);
