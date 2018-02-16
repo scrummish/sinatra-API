@@ -27,6 +27,9 @@ App Screens                  |  Database
 :-------------------------:|:-------------------------:
 ![](https://github.com/scrummish/snitchr-backend/blob/master/assets/WireFrames.jpg)  |  ![](https://github.com/scrummish/snitchr-backend/blob/master/assets/Database.jpg)
 
+## Contributers
+- Sergio Rocha
+- Somers Mathews
 
 ## Technologies Used
 * <a href="https://nodejs.org/en/">Node.js</a> - The runtime environment used to create my server.
